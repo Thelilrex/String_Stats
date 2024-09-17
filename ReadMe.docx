@@ -2,12 +2,16 @@ System Requirements:
 Any system that has and can compile Java files, preferably a laptop with windows 10 or later OS.
 
 Versions:
-Device [Preferred and tested on]: Windows 11 OS
+Device [Preferred and tested on]: Windows 11 OS [Shouldn't really matter as long as the device has JVM, compiler for java and matching/supporting env with the file]
 Language: Java, Version: 20.0.1.0
 Download Link: https://www.oracle.com/java/technologies/javase/jdk20-archive-downloads.html
 IDE: Apache NetBeans IDE: Version 17
 Download Link: https://netbeans.apache.org/front/main/download/nb17/
 Automation tool/Testing tool: Maven:3.8.7
+Libraries used: 
+    Program: java.util.Scanner;
+    Testing: org.junit.jupiter.api.Test;
+             static org.junit.jupiter.api.Assertions.*;
 
 User Instruction:
 If not installed download and install the compiler (Ideally NetBeans) and java(jvm) from the above links
@@ -20,17 +24,24 @@ you can trust files and proceed.
 
 Purpose:
 This code is programmed to take user's input and displays:
-number of characters (excluding spaces), 
-number of vowels (a, e, i, o, u) and 
+number of characters (or elements) (excluding spaces), 
+number of vowels (a, e, i, o, u, A, E, I, O, U) and 
 number of digits,
 in the given input.
 
-How to use the code: 
-Open your configured compiler, build the function and run the folder containing main (TestUnitAssignment.java).
+How to use the code:
+First download or clone from GitHub to your local storage. 
+[path:- TestUnit_Assignment\src\main\java\TestUnitAssignment.java] (You just need to load/open the TestUnit_Assignment from/in your compiler)
+Open the project file in your configured compiler, build the function and run 
+(that little green play button somewhere on the top) the folder containing main (TestUnitAssignment.java).
 User (You): Ideally a computer enthusiast with at least minimal knowledge on configuring, compiling and running code.
 Input Device: Active working keyboard (physical or virtual) (Standard input)
 Output Device: Screen
 Valid Input: English alphabets, numbers, special characters (`"';:!@#$%^&*()_+.\/=,><[]{}-|?)
+When and where to input:
+Upon running the program the will open command line (a black screen at the bottom or on top of your screen,
+You just need to enter your input once you see 
+Enter your desired string)
 
 NOTE: 
 Program might work with non english characters, 
@@ -38,7 +49,10 @@ however due to the design of the program using other language alphabets would,
 result in their characters being considered characters despite them being 
 digits or vowel types.
 
-Expected Behavior: As mentioned earlier the program is supposed to take users input and display characters, vowels and digits.
+Expected Behavior: 
+As mentioned earlier the program is supposed to take users input and display characters, vowels and digits.
+Upon pressing enter the program will compile and will give your output followed by exit code. 
+This program is programmed to run once. If you want to reuse it you need to rerun the main.
 
 NOTE: Upon pressing "Enter" button the program revokes input permission. There for use "Enter" button to run your input.
 
@@ -62,5 +76,39 @@ The vowels count is: 0
 The digit count is: 4
 
 User's Input: 
-Output: Its an empty string
+Output: 0
 
+
+------------------------------End of Information for User's-------------------------------------
+-----------------------------Information for devs and testers-----------------------------------
+
+Testing Instructions:
+See the TestUnit_AssignmentTest.java file for the test cases.
+
+Total test cases 19 (pass % = 100)
+Test cases that have been tested:
+
+Empty string on char_Count, vowel_Count, and digit_Count methods
+Null input on char_Count, vowel_Count, and digit_Count methods
+String with only spaces on char_Count, vowel_Count, and digit_Count methods
+String with foreign characters on char_Count, vowel_Count, and digit_Count methods
+String with special characters on char_Count, vowel_Count, and digit_Count methods
+String with alphaNumerical characters on char_Count, vowel_Count, and digit_Count methods
+String with capital and small vowels on vowel_count.
+
+Problems:
+Due to java's interpretation testing for key characters such as '\n', '\0' etc., we not performed. 
+Also if the user inputs "null" the program would consider it as input string with 'n', 'u', 'l', 'l' as its characters. 
+Used maven tool for testing. Versions have been mentioned above.
+Haven't checked many foreign inputs.
+Haven't checked the mixed char and space inputs.
+Haven't checked main function
+Haven't checked for keywords
+Haven't checked for 
+
+NOTE:
+Using spacial characters in naming methods leads to test failure. Instead of a_Method use camel notation like aMethod. 
+Also, using fail(message) leads to test failure.
+
+NOTE:
+Make sure your env configurations match the programs configurations to avoid unexpected behavior and errors
