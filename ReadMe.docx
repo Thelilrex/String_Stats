@@ -1,0 +1,66 @@
+System Requirements:
+Any system that has and can compile Java files, preferably a laptop with windows 10 or later OS.
+
+Versions:
+Device [Preferred and tested on]: Windows 11 OS
+Language: Java, Version: 20.0.1.0
+Download Link: https://www.oracle.com/java/technologies/javase/jdk20-archive-downloads.html
+IDE: Apache NetBeans IDE: Version 17
+Download Link: https://netbeans.apache.org/front/main/download/nb17/
+Automation tool/Testing tool: Maven:3.8.7
+
+User Instruction:
+If not installed download and install the compiler (Ideally NetBeans) and java(jvm) from the above links
+
+Disclaimer: 
+Sometimes your system/compiler might warn you for using the program. 
+This is due to lack of signature, which is used to indicate that the program 
+has not been tampered. Since, we are rookies, students, and are directly delivering the product
+you can trust files and proceed. 
+
+Purpose:
+This code is programmed to take user's input and displays:
+number of characters (excluding spaces), 
+number of vowels (a, e, i, o, u) and 
+number of digits,
+in the given input.
+
+How to use the code: 
+Open your configured compiler, build the function and run the folder containing main (TestUnitAssignment.java).
+User (You): Ideally a computer enthusiast with at least minimal knowledge on configuring, compiling and running code.
+Input Device: Active working keyboard (physical or virtual) (Standard input)
+Output Device: Screen
+Valid Input: English alphabets, numbers, special characters (`"';:!@#$%^&*()_+.\/=,><[]{}-|?)
+
+NOTE: 
+Program might work with non english characters, 
+however due to the design of the program using other language alphabets would,
+result in their characters being considered characters despite them being 
+digits or vowel types.
+
+Expected Behavior: As mentioned earlier the program is supposed to take users input and display characters, vowels and digits.
+
+NOTE: Upon pressing "Enter" button the program revokes input permission. There for use "Enter" button to run your input.
+
+Example: 
+User's Input: 1a 2e 3i 4o 5u
+Output:  
+The character count is: 10
+The vowels count is: 5
+The digit count is: 5
+
+User's Input: Five + Six = ?
+Output: 
+The character count is: 10
+The vowels count is: 3
+The digit count is: 0
+
+User's Input: 123 + 6 = ?
+Output: 
+The character count is: 7
+The vowels count is: 0
+The digit count is: 4
+
+User's Input: 
+Output: Its an empty string
+
